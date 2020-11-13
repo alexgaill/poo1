@@ -15,7 +15,7 @@ abstract class Poisson{
      *
      * @var integer
      */
-    protected $branchies;
+    protected static $branchies;
 
     /**
      * Undocumented variable
