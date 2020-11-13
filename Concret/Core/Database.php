@@ -10,6 +10,8 @@ class Database{
      */
     protected $pdo;
 
+    protected $statement;
+
     /**
      * Connexion à la BDD
      *
@@ -28,5 +30,22 @@ class Database{
         } catch (\PDOException $e) {
             return $e->getMessage();
         }
+    }
+
+    public function query($statement, $one = false)
+    {
+        $query = $this->pdo->query($statement);
+
+        if($one){
+            return $query->fetch(\PDO::FETCH_OBJ);
+        } else {
+            return $query->fetchAll(\PDO::FETCH_OBJ);
+        }
+    }
+
+    public function prepare($statement, $data = array())
+    {
+        $prepare = $this->pdo->prepare($statement);
+        $prepare->execute($data);
     }
 }
