@@ -8,7 +8,7 @@ class PoissonRouge extends Poisson{
     /**
      * Undocumented variable
      *
-     * @var boolean
+     * @var integer
      */
     public static $ecailles = 3;
 
@@ -26,8 +26,13 @@ class PoissonRouge extends Poisson{
 
     }
 
-    public function getEcailles()
+    public function getEcailles():int
     {
         return self::$ecailles;
+    }
+
+    public static function setBranchies(int $branchies)
+    {
+        parent::$branchies = $branchies;
     }
 }

@@ -34,3 +34,5 @@ echo "</br>";
 PoissonRouge::$ecailles = 5;
 $poisson2 = new PoissonRouge();
 echo $poisson2->getEcailles();
+
+PoissonRouge::setBranchies(5);
