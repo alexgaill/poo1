@@ -31,6 +31,10 @@ class PoissonRouge extends Poisson{
         return self::$ecailles;
     }
 
+    public static function getBranchies():int
+    {
+        return parent::$branchies;
+    }
     public static function setBranchies(int $branchies)
     {
         parent::$branchies = $branchies;
