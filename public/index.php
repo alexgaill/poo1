@@ -2,11 +2,11 @@
 
 use App\Mammiferes\Chien;
 use App\Mammiferes\Chat;
+use App\Poissons\PoissonRouge;
 
 require "../Autoloader.php";
 
-$autoloader = new Autoloader();
-$autoloader->register();
+Autoloader::register();
 
 $chien1 = new Chien("Medor", "gris");
 $chien2 = new Chien("Rex", "brungé");
@@ -26,5 +26,11 @@ echo "</br>";
 echo $chat2->nom;
 echo "</br>";
 
+echo PoissonRouge::$ecailles;
+echo "</br>";
 $poisson = new PoissonRouge();
-echo $poisson->nager();
+echo $poisson->getEcailles();
+echo "</br>";
+PoissonRouge::$ecailles = 5;
+$poisson2 = new PoissonRouge();
+echo $poisson2->getEcailles();

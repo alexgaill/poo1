@@ -1,4 +1,5 @@
 <?php
+namespace App\Poissons;
 
 abstract class Poisson{
 

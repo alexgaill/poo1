@@ -42,8 +42,7 @@ class Mammifere{
      */
     public function __construct(string $nom, string $pelage){
         $this->nom = $nom;
-        $this->pelage = $pelage;
-        
+        $this->pelage = $pelage;  
     }
 
     /**

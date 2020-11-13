@@ -1,6 +1,8 @@
 <?php
+namespace App\Poissons;
 
-require_once "Poisson.php";
+use App\Poissons\Poisson;
+
 class PoissonRouge extends Poisson{
 
     /**
@@ -8,7 +10,7 @@ class PoissonRouge extends Poisson{
      *
      * @var boolean
      */
-    private $ecailles;
+    public static $ecailles = 3;
 
     /**
      * Undocumented function
@@ -22,5 +24,10 @@ class PoissonRouge extends Poisson{
 
     public function nager(){
 
+    }
+
+    public function getEcailles()
+    {
+        return self::$ecailles;
     }
 }

@@ -1,6 +1,8 @@
 <?php
+namespace App\Poissons;
 
-require_once "Poisson.php";
+use App\Poissons\Poisson;
+
 class Requin extends Poisson{
 
     /**
