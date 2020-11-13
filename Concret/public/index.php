@@ -1,11 +1,11 @@
 <?php
 
-use Core\Database;
+use App\Controller\OrderController;
 
 require "../Autoloader.php";
 Autoloader::register();
 
-$db = new Database();
+define("ROOT", dirname(__DIR__));
 
-$query = $db->pdo->query("SELECT * FROM orders");
-var_dump($query->fetchAll());
+$orderController = new OrderController();
+$orderController->render();
